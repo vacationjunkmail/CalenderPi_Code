@@ -1,0 +1,9 @@
+#0 2 * * 6 /var/www/cal_app/setup/dump_mysql_tables_no_data
+#50 0 1 * * /home/pi/code/python/delete_gmail_.py
+05 4 * * 0 /home/pi/code/python/gmail_script.py
+05 5 * * 0-6 /var/www/cal_app/scripts/read_menu.py
+05 6 * * 0 /home/pi/code/bash/move_twitter.sh >> /tmp/delete_later.log 2>&1
+
+#Truncates *log files to 0
+0 1 1 * * /var/www/cal_app/scripts/truncate_logs
+
