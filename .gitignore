@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+*.ini
+*.jpg
+*.png
+*.swp
