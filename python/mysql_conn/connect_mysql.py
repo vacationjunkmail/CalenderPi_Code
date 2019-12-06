@@ -51,6 +51,11 @@ class get_connection():
             self.conn.rollback()
             return err
 
+    def update_statement(self,query,params):
+        self.curr.execute(query,params)
+        self.conn.commit()
+        return "Update Complete"
+
     def load_data_infile(self,data_file):
         self.conn.set_client_flags(ClientFlag.LOCAL_FILES)
         self.curr = self.conn.cursor()
