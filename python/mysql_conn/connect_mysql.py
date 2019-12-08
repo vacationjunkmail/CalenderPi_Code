@@ -43,7 +43,7 @@ class get_connection():
     def insert_statement(self,query,params):
         try:
             self.conn.start_transaction()
-            self.curr.execute('''insert into test_db.test_tbl(username,pwd)values("manualinsert","pwd_insert");''')
+            #self.curr.execute('''insert into test_db.test_tbl(username,pwd)values("manualinsert","pwd_insert");''')
             self.curr.execute(query,params)
             self.conn.commit()
             return "insert was good"
