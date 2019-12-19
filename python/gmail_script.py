@@ -145,8 +145,6 @@ class Gmail:
 		self.mail.logout()
 		return "Goodbye : )"
 
-
-
 a = Gmail('/home/pi/Desktop/deleted_target_email.log')
 a.login()
 #a.attachment()

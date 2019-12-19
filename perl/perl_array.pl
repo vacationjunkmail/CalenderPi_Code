@@ -14,4 +14,7 @@ foreach my $item (@first_array)
 	}
 	#print("$found\n");
 }
+use POSIX qw(strftime);
+my $now_string = strftime "%a %b %e %H:%M:%S %Y",localtime;
+print "$now_string\n";
 
