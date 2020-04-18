@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import configparser
 from os.path import expanduser
+from pathlib import Path
 
 #https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail/
 #http://www.vineetdhanawat.com/blog/2012/06/how-to-extract-email-gmail-contents-as-text-using-imaplib-via-imap-in-python-3/
@@ -13,7 +14,11 @@ import sys
 import os
 
 dt_now = datetime.datetime.now()
-filename = "/home/pi/Downloads/{}_twitter.txt".format(dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
+home_path = expanduser("~")
+home_path = str(Path.home())
+filename = "{}/Downloads/{}_twitter.txt".format(home_path,dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
+print(filename)
+sys.exit(1)
 
 def read_config_file(filename='.config.ini', section='gmail'):
 
