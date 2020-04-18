@@ -17,13 +17,11 @@ dt_now = datetime.datetime.now()
 home_path = expanduser("~")
 home_path = str(Path.home())
 filename = "{}/Downloads/{}_twitter.txt".format(home_path,dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
-print(filename)
-sys.exit(1)
 
 def read_config_file(filename='.config.ini', section='gmail'):
 
     parser = configparser.ConfigParser()
-    config_file = "/home/pi/{}".format(filename)
+    config_file = "{}/{}".format(home_path,filename)
     parser.read(config_file, encoding="utf-8")
 
     data = {}
@@ -45,8 +43,8 @@ class Gmail:
 		self.delete_list.append('stackoverflow.email')
 		self.delete_list.append('citadines.com')
 		self.mail = ''
-		self.download = '/home/pi/Downloads/temp/'
-		self.menu = "/home/pi/Downloads/{}_menu.txt".format(dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
+		self.download = '{}/Downloads/temp/'.format(home_path)
+		self.menu = "{}/Downloads/{}_menu.txt".format(home_path,dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
 		
 	def login(self):
 		
@@ -150,7 +148,7 @@ class Gmail:
 		self.mail.logout()
 		return "Goodbye : )"
 
-a = Gmail('/home/pi/Desktop/deleted_target_email.log')
+a = Gmail('{}/Desktop/deleted_target_email.log'.format(home_path))
 a.login()
 #a.attachment()
 print(a.weeklypost('Weekly Post'))
