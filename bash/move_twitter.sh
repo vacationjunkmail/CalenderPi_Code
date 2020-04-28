@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 home_path=$HOME
-
+echo "Running move twitter script. home path:$home_path";
 alias_file="$home_path/.bashrc_aliases";
 directory="$home_path/Downloads/";
 
