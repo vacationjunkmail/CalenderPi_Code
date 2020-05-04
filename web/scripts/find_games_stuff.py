@@ -8,7 +8,7 @@
 import os, datetime, re, sys, time
 from mysql_conn.connect_mysql import get_connection
 
-console_id = 13
+console_id = 10
 select_statement = '''select v.id,v.`name`,g.console_shortname,v.small_image,v.large_image,v.header_image 
 			from games.video_games as v inner join games.game_console as g on g.id=v.console_id 
 			where g.id = {} and (v.small_image ='' or v.large_image = '' or v.small_image is null or v.large_image is null
@@ -88,13 +88,13 @@ for row in video_game_data:
 		continue
 			
 	mysql_db = get_connection()
-	if row[5] is '' and h:
+	if (row[5] is '' or row[5] is None) and h:
 		ph = mysql_db.update_statement(update_header_image,[h,row[0]])
 		db_response("Header Image",ph)
-	if row[3] is '' and s:
+	if (row[3] is '' or row[3] is None) and s:
 		ph = mysql_db.update_statement(update_small_image,[s,row[0]])
 		db_response("Small Image",ph)
-	if row[4] is '' and l:
+	if (row[4] is '' or row[4] is None) and l:
 		ph = mysql_db.update_statement(update_large_image,[l,row[0]])
 		db_response("Large Image",ph)
 	mysql_db.close_connection()

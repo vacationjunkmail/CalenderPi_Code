@@ -32,7 +32,9 @@ def _error_mysql(e):
 	sys.exit()
 	return ""
 
-with open("/var/www/cal_app/scripts/_games.txt") as f:
+game_file = "{}/_games.txt".format(sys.path[0])
+
+with open(game_file) as f:
 	for line in f:
 		line = line.strip().split('|&|')
 		title_console = line[0].split(',')
