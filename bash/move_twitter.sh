@@ -2,7 +2,7 @@
 
 home_path=$HOME
 echo "Running move twitter script. home path:$home_path";
-alias_file="$home_path/.bashrc_aliases";
+alias_file="$home_path/.bash_aliases";
 directory="$home_path/Downloads/";
 
 rsync_addr=''

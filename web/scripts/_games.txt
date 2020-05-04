@@ -495,7 +495,7 @@ Tecmo Super Bowl II Special Edition,2|&|Miami Dolphins,Dallas Cowboys,Pittsburgh
 Tecmo Super Bowl III Final Edition,2|&|St. Louis Rams,Denver Broncos,Cincinatti Bengals,Minnesota Vikings,Washington Redskins,New England Patriots,And more NFL teams|&|Pro Football simulation
 Tecmo Super NBA Basketball,2|&|Minnesota Timberwolves,Orlando Magic,Washington Bullets,Dallas Mavericks,Phoenix Suns,New Jersey Nets,And More NBA Teams|&|Pro Basketball Simulation
 Troy Aikman NFL Football,2|&|Buffalo Bills,Dallas Cowboys,Los Angeles Rams,Kansas City Cheifs,San Francisco 49ers,Los Angeles Raiders,And more NFL Teams|&|Pro Football Simulation
-WWF Raw,2|&|Luna Vachon,Yokozuna,Razor Ramon,Doink the Clown,Diesel,Owen Hart,Lex Lugar,Shawn Michaels,And More Wreslters|&|Pro Wrestling simulation game.
+WWF Raw,2|&|Luna Vachon,Yokozuna,Razor Ramon,Doink the Clown,Diesel,Owen Hart,Lex Lugar,Shawn Michaels,And More Wrestlers|&|Pro Wrestling simulation game.
 WWF Royal Rumble,2|&|Crush, Randy Savage,Ric Flair,Mr. Perfect,Ted DiBiase,Tatanka,And More Wrestlers|&|Pro Wreslting Simulation 
 Crazy Taxi Fare Wars,15|&|Taxi Driver|&|It's an all-out bumper brawl as cabbies race, ram, smash and dash to steal fares and score big tips. Crazy Taxi™: Fare Wars combines Crazy Taxi and Crazy Taxi 2 with hilarious new features 
 Valhalla Knights,15|&|Hero|&|One day, a brave youth awakens in this land, unable to recall who he/she is and having no recollection of his/her past. 
