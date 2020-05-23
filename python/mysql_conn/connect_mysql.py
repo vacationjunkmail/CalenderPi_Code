@@ -56,6 +56,11 @@ class get_connection():
         self.conn.commit()
         return "Update Complete"
 
+    def mod_statement(self,query,params,q_type):
+        self.curr.execute(query,params)
+        self.conn.commit()
+        return q_type + " complete"
+
     def load_data_infile(self,data_file):
         self.conn.set_client_flags(ClientFlag.LOCAL_FILES)
         self.curr = self.conn.cursor()
