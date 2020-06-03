@@ -32,6 +32,7 @@ class get_connection():
     def __init__(self):
         self.db_config = read_config_file()
         self.conn = connection.MySQLConnection(**self.db_config)
+        self.conn.get_warnings = True
         self.curr = self.conn.cursor(cursor_class=MySQLCursorPrepared)
 
     def select_query(self, query):
@@ -52,9 +53,15 @@ class get_connection():
             return err
 
     def update_statement(self,query,params):
-        self.curr.execute(query,params)
-        self.conn.commit()
-        return "Update Complete"
+        msg = "Update Complete"
+        try:
+            self.curr.execute(query,params)
+            self.conn.commit()
+            if self.curr.fetchwarnings() is not None:
+                msg = self.curr.fetchwarnings()
+        except Error as err:
+            msg = err
+        return msg 
 
     def mod_statement(self,query,params,q_type):
         self.curr.execute(query,params)
