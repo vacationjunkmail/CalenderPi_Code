@@ -146,6 +146,23 @@ CREATE TABLE `video_game_and_characters` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `video_game_comments`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `video_game_comments` (
+  `id` int(3) unsigned NOT NULL,
+  `game_id` smallint(3) unsigned NOT NULL,
+  `comment` varchar(140) NOT NULL,
+  `status` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `fk_game_id` (`game_id`),
+  CONSTRAINT `fk_game_id` FOREIGN KEY (`game_id`) REFERENCES `video_games` (`id`)
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `video_games`
 --
 
@@ -877,4 +894,4 @@ CREATE TABLE `test_tbl` (
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-11 19:51:09
+-- Dump completed on 2020-07-15 18:41:18
