@@ -42,6 +42,7 @@ class Gmail:
 		self.delete_list = ['redditmail.com','shutterstock.com','target.com','moviesanywhere.com','sales.bogertmfg']
 		self.delete_list.append('stackoverflow.email')
 		self.delete_list.append('citadines.com')
+		self.delete_list.append('peacocktv.com')
 		self.mail = ''
 		self.download = '{}/Downloads/temp/'.format(home_path)
 		self.menu = "{}/Downloads/{}_menu.txt".format(home_path,dt_now.strftime('%a_%b_%d_%Y_%H_%M_%S_%p'))
