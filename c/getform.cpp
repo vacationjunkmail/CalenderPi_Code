@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <string>
 #include <cgicc/CgiDefs.h>
 #include <cgicc/Cgicc.h>
 #include <cgicc/HTTPHTMLHeader.h>
@@ -39,30 +40,6 @@ const string ENV[ 24 ] = {
 
 int main()
 {
-	/*sql::mysql::MySQL_Driver *driver;
-	sql::Connection *con;
-
-	driver = sql::mysql::get_mysql_driver_instance();
-	con = driver->connect("tcp://127.0.0.1:3306", "web_user", "mysqlroot");
-
-	delete con;
-*/
-/*  	sql::Driver *driver;
-  	sql::Connection *con;
-  	sql::Statement *stmt;
-  	sql::ResultSet *res;
-
-	driver = get_driver_instance();
-	con = driver->connect("tcp://127.0.0.1:3306", "web_user", "mysqlroot");
-	
-	con->setSchema("games");
-	stmt = con->createStatement();
-	res = stmt->executeQuery("select * from games.video_games limit 5;");
-
-	delete res;
-	delete stmt;
-	delete con;
-*/
 	Cgicc formData;
 	bool math_flag, physics_flag;
 
@@ -148,6 +125,9 @@ int main()
 	}
 	cout << "</td></tr>";
 	cout << "</table>";
+
+	fi = formData.getElement("dana");
+	cout << "<font style='text-underline'>" << **fi << "</font>";
 
 	try {
 
