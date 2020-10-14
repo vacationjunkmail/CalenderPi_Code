@@ -27,7 +27,6 @@ using namespace cgicc;
 //http://ce.sharif.edu/courses/94-95/1/ce244-2/resources/root/cpp_web_programming.pdf
 //https://www.tutorialspoint.com/cplusplus/cpp_web_programming.htm
 // g++ -o getform.cgi getform.cpp -lcgicc -lmysqlcppconn; mv *.cgi /var/www/cgi-btn/
-//https://github.com/anhstudios/mysql-connector-cpp/tree/master/examples
 
 int main()
 {

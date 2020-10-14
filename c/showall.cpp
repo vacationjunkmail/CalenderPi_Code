@@ -27,7 +27,10 @@ using namespace cgicc;
 //http://ce.sharif.edu/courses/94-95/1/ce244-2/resources/root/cpp_web_programming.pdf
 //https://www.tutorialspoint.com/cplusplus/cpp_web_programming.htm
 // g++ -o getform.cgi getform.cpp -lcgicc -lmysqlcppconn; mv *.cgi /var/www/cgi-btn/
-
+/*
+ https://github.com/cmakified/cgicc/blob/master/demo/test.cpp
+ https://www.gnu.org/software/cgicc/doc/cgicc_tutorial.html
+ */
 int main()
 {
 	Cgicc formData;
@@ -58,18 +61,33 @@ int main()
 	
 		con->setSchema("games");
 
-		int gid = formData.getElement("gid");
-		cout << "<h1>" << gid << "</h1>";
-	if(gid)
-	{
-		cout << "First Name is :" << gid;		
-	}
-	else
-	{
-		cout << "No first name was entered! :(";
-	}
+		form_iterator game_id = formData.getElement("gid");
+		cout << "<h1>" << **game_id << "</h1>";
+		if(!game_id->isEmpty())
+		{
+			pstmt = con->prepareStatement("select id,console_name,console_shortname,coalesce(twitter,'') as twitter,coalesce(facebook,'') as facebook "
+		"from games.game_console where id= ?;");
+			int gid = (*game_id).getIntegerValue();
+			printf("test me %d",gid);
 			
-		pstmt = con->prepareStatement("select id,console_name,console_shortname,coalesce(twitter,'') as twitter,coalesce(facebook,'') as facebook from games.game_console;");
+			pstmt->setInt(1,gid);
+			res = pstmt->executeQuery();
+			while (res->next())
+			{
+				cout << res->getString("console_name");
+			}
+			//cout << "First Name is :" << **game_id ;		
+			
+			delete res;
+			delete pstmt;
+		}
+		else
+		{
+			cout << "No first name was entered! :(";
+		}
+			
+		pstmt = con->prepareStatement("select id,console_name,console_shortname,coalesce(twitter,'') as twitter,coalesce(facebook,'') as facebook "
+		"from games.game_console;");
 		res = pstmt->executeQuery();
 						
 		cout << "<nav class='navbar navbar-fixed-top'><div class='content-padding'>" << endl;
