@@ -44,9 +44,13 @@ with open(game_file) as f:
 		r = _select(find_title_query,title_params)
 		game_id = int(r)
 		print("Working on {}:".format(title))
+		if len(line) < 3:
+			print("{} is missing data, fix and re-run script.  {} will be skipped".format(title,title))	
+			continue
 		description_text = line[2]
 		if len(description_text) == 0:
-			print("{} has no description fix and re-run script.".format(title))
+			print("{} has no description and will get skipped fix and re-run script. ".format(title))
+			continue
 			sys.exit()
 		if game_id == 0:
 			print("\tInsert new game {}".format(title))

@@ -1,4 +1,5 @@
 Spyro the Dragon,10|&|Spyro,Gnasty Groc,Dr. Shemp,And More...|&|IN THE BEGINNING, the five Dragon families lived in their five Dragon Worlds in harmony. Their lives were happy and peaceful...  until the day a Gnorc broke the rules!
+A Plague Tale Innocence,13|&| 
 Legacy of Kain Soul Reaver,11|&|Raziel,Kain,Ariel,Melciah,Zephon,And More...|&|As the game begins, Raziel approaches Kain's throne and extends newly grown wings. In an act of seeming jealousy, Kain tears the bones from Raziel's wings and has him thrown into the Lake of the Dead, a large natural whirlpool; however, Raziel is resurrected as a wraith by The Elder God to become his "soul reaver" and kill Kain, thus restoring Nosgoth.
 Duck Hunt,1|&|Dog, Hunter|&|Shoot ducks with a lightgun.
 Ducktales,1|&|Huey, Dewy,Louie,Launchpad,Scrooge|&|Travel around the world and outer space in search of five treasures to further increase his fortune.
@@ -498,4 +499,15 @@ Troy Aikman NFL Football,2|&|Buffalo Bills,Dallas Cowboys,Los Angeles Rams,Kansa
 WWF Raw,2|&|Luna Vachon,Yokozuna,Razor Ramon,Doink the Clown,Diesel,Owen Hart,Lex Lugar,Shawn Michaels,And More Wrestlers|&|Pro Wrestling simulation game.
 WWF Royal Rumble,2|&|Crush, Randy Savage,Ric Flair,Mr. Perfect,Ted DiBiase,Tatanka,And More Wrestlers|&|Pro Wreslting Simulation 
 Crazy Taxi Fare Wars,15|&|Taxi Driver|&|It's an all-out bumper brawl as cabbies race, ram, smash and dash to steal fares and score big tips. Crazy Taxi™: Fare Wars combines Crazy Taxi and Crazy Taxi 2 with hilarious new features 
-Valhalla Knights,15|&|Hero|&|One day, a brave youth awakens in this land, unable to recall who he/she is and having no recollection of his/her past. 
+Valhalla Knights,15|&|Hero|&|One day, a brave youth awakens in this land, unable to recall who he/she is and having no recollection of his/her past.
+Resident Evil 2 Remake,13|&|Leon Kennedy,Claire Redfield,Ada Wong,Sherry Birkin,Mr X,Tyrant|&|The game is set in Raccoon City in September 1998, two months after the events of Resident Evil. Most of the citizens have been turned into mindless zombies, due to an outbreak of a viral bioweapon known as the T-Virus, manufactured by Umbrella Corporation.
+Resident Evil 3 Remake,13|&|
+Red Dead Redemption 2,13|&|
+Final Fantasy VII Remake,13|&|
+Ni No Kuni II Revenant Kingdom,13|&|
+The Last of Us Part II,13|&|
+Until Dawn,13|&|
+Shadow of the Tomb Raider,13|&|
+Final Fantasy XII The Zodiac Age,13|&|
+Ghost Recon Wildlands,13|&|
+A Plague Tale Innocence,13|&| 

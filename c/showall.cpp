@@ -30,6 +30,11 @@ using namespace cgicc;
 /*
  https://github.com/cmakified/cgicc/blob/master/demo/test.cpp
  https://www.gnu.org/software/cgicc/doc/cgicc_tutorial.html
+ https://github.com/mysql/mysql-connector-cpp
+ * 
+ * https://www.google.com/search?ei=4oaHX_T9CfWkytMPvZmNgAw&q=cppconn+example.h&oq=cppconn+example.h&gs_lcp=CgZwc3ktYWIQA1C8-QFYvPkBYP37AWgAcAB4AIABAIgBAJIBAJgBAqABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwj09qHPm7XsAhV1knIEHb1MA8AQ4dUDCA0&uact=5
+ * https://dev.mysql.com/doc/connector-cpp/1.1/en/connector-cpp-getting-started-examples.html
+ * https://github.com/anhstudios/mysql-connector-cpp/blob/master/examples/prepared_statement.cpp
  */
 int main()
 {
@@ -42,9 +47,9 @@ int main()
 	cout << "<link rel='stylesheet' href='/public/css/bootstrap_v3.3.7.min.css'>\n";
 	cout << "<link rel='stylesheet' href='/public/css/google.Monsterrant.400.400.css'>\n";     
 	cout << "<link rel='stylesheet' href='/public/css/font-awesome.v4.6.3.min.css'>\n";
-    cout << "<link rel='stylesheet' href='/public/css/styles.css'>\n";
-    cout << "<script src='/public/js/jquery_v1.12.4.min.js'></script>\n";
-    cout << "<script src='/public/js/bootstrap_v3.3.7.min.js'></script>\n";
+	cout << "<link rel='stylesheet' href='/public/css/styles.css'>\n";
+	cout << "<script src='/public/js/jquery_v1.12.4.min.js'></script>\n";
+	cout << "<script src='/public/js/bootstrap_v3.3.7.min.js'></script>\n";
 	cout << "</head><body>\n" << endl;
 
 	cout << "<div id='hero-image'><h1 id='hero-title'>Games App CGI C++</h1></div>\n";
@@ -72,11 +77,14 @@ int main()
 			
 			pstmt->setInt(1,gid);
 			res = pstmt->executeQuery();
-			while (res->next())
+			// gets the row i think cout << res->rowsCount();
+			
+			//cout << res->getInt(1);
+			/*while (res->next())
 			{
 				cout << res->getString("console_name");
-			}
-			//cout << "First Name is :" << **game_id ;		
+			}*/
+	
 			
 			delete res;
 			delete pstmt;
