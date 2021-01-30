@@ -501,13 +501,13 @@ WWF Royal Rumble,2|&|Crush, Randy Savage,Ric Flair,Mr. Perfect,Ted DiBiase,Tatan
 Crazy Taxi Fare Wars,15|&|Taxi Driver|&|It's an all-out bumper brawl as cabbies race, ram, smash and dash to steal fares and score big tips. Crazy Taxi™: Fare Wars combines Crazy Taxi and Crazy Taxi 2 with hilarious new features 
 Valhalla Knights,15|&|Hero|&|One day, a brave youth awakens in this land, unable to recall who he/she is and having no recollection of his/her past.
 Resident Evil 2 Remake,13|&|Leon Kennedy,Claire Redfield,Ada Wong,Sherry Birkin,Mr X,Tyrant|&|The game is set in Raccoon City in September 1998, two months after the events of Resident Evil. Most of the citizens have been turned into mindless zombies, due to an outbreak of a viral bioweapon known as the T-Virus, manufactured by Umbrella Corporation.
-Resident Evil 3 Remake,13|&|
+Resident Evil 3 Remake,13|&|Jill Valentine,Carlos Oliveira,Tyrell Patrick,Mikhail Victor,Nicholai Ginovaef|&|During a zombie outbreak in Raccoon City caused by the T-Virus created by Umbrella Corporation. You are stalked by Nemesis who is attempting to kill you and keep Umbrella's secrets buried.
+Until Dawn,13|&|Mike Munroe,Jessica Riley,Hannah Washington, Beth Washington,Josh Washington,Stranger,Sam Giddings,Chris Hartley,Ashley Brown,Emaily Davis,Matt Taylor,Wendigo,Dr. Hill|&|Eight teens reunite at a snowy cabin one year after tragic events took the life of 2 of their friends.
 Red Dead Redemption 2,13|&|
 Final Fantasy VII Remake,13|&|
 Ni No Kuni II Revenant Kingdom,13|&|
 The Last of Us Part II,13|&|
-Until Dawn,13|&|
 Shadow of the Tomb Raider,13|&|
 Final Fantasy XII The Zodiac Age,13|&|
-Ghost Recon Wildlands,13|&|
-A Plague Tale Innocence,13|&| 
+Ghost Recon Wildlands,13|&|Delta Company, El Sueno|&|In Bolivia the country is over run by a Mexican drug cartel known as Santa Blanca.  The control the countries cops, and political figures|&|.jpg|&|.png
+A Plague Tale Innocence,13|&|Amicia de Rune,Hugo de Rune,Beatrice de Rune,English Army, Rats|&|Grim tale of brother and sister in a heartrending journey through the darkest hours of history.|&|.jpg|&|.jpeg 

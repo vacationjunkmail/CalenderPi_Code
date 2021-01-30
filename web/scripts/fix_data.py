@@ -17,6 +17,7 @@ new_character_insert = '''insert into games.characters(name)values(%s);'''
 video_character_insert = '''insert into games.video_game_and_characters(video_game_id,character_id)values(%s,%s);'''
 delete_video_character = '''delete from games.video_game_and_characters where video_game_id = %s;'''
 update_game_description = '''update games.video_games set game_description = %s where id = %s;'''
+update_images = '''update games.video_games set small_image = %s, large_image=%s where id = %s;'''
 
 def _select(q,p):
 	results = mysql_db.select_params(q,p)
@@ -61,6 +62,12 @@ with open(game_file) as f:
 		del_params = [game_id]
 		u = mysql_db.update_statement(update_game_description,[description_text,game_id])
 		d = mysql_db._delete(delete_video_character,del_params)
+		if len(line) == 5:
+			#small_image, large_image,game_id
+			name_no_spaces = line[0].replace(" ","")
+			sm = "{}{}".format(name_no_spaces.lower(),line[3])
+			lm = "{}{}".format(name_no_spaces.lower(),line[4])
+			images = mysql_db.update_statement(update_images,[sm,lm,game_id])
 		characters = line[1].split(',')
 		print("\tAdding Characters:")
 		for item in characters:
