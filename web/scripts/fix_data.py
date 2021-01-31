@@ -3,6 +3,12 @@
 from mysql_conn.connect_mysql import get_connection
 
 import sys
+import argparse
+
+parser = argparse.ArgumentParser(description="Will add/update games I have played. 127.0.0.1/games/")
+parser.add_argument("-s","--system", help="Please add a system, ex: ps, nes,sega, other",required=True)
+
+args = parser.parse_args()
 
 title_len = 0
 char_len = 0
@@ -33,7 +39,7 @@ def _error_mysql(e):
 	sys.exit()
 	return ""
 
-game_file = "{}/_games.txt".format(sys.path[0])
+game_file = "{}/{}_games.txt".format(sys.path[0],args.system)
 
 with open(game_file) as f:
 	for line in f:
@@ -64,9 +70,9 @@ with open(game_file) as f:
 		d = mysql_db._delete(delete_video_character,del_params)
 		if len(line) == 5:
 			#small_image, large_image,game_id
-			name_no_spaces = line[0].replace(" ","")
-			sm = "{}{}".format(name_no_spaces.lower(),line[3])
-			lm = "{}{}".format(name_no_spaces.lower(),line[4])
+			image_name = title.replace(" ","")
+			sm = "{}{}".format(image_name.lower(),line[3])
+			lm = "{}{}".format(image_name.lower(),line[4])
 			images = mysql_db.update_statement(update_images,[sm,lm,game_id])
 		characters = line[1].split(',')
 		print("\tAdding Characters:")

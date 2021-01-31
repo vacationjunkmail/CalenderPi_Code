@@ -505,9 +505,9 @@ Resident Evil 3 Remake,13|&|Jill Valentine,Carlos Oliveira,Tyrell Patrick,Mikhai
 Until Dawn,13|&|Mike Munroe,Jessica Riley,Hannah Washington, Beth Washington,Josh Washington,Stranger,Sam Giddings,Chris Hartley,Ashley Brown,Emaily Davis,Matt Taylor,Wendigo,Dr. Hill|&|Eight teens reunite at a snowy cabin one year after tragic events took the life of 2 of their friends.
 Red Dead Redemption 2,13|&|
 Final Fantasy VII Remake,13|&|
-Ni No Kuni II Revenant Kingdom,13|&|
+Ni No Kuni II Revenant Kingdom,13|&|Roland Crane|&|Have not started|&|.jpg|&|.jpg
 The Last of Us Part II,13|&|
 Shadow of the Tomb Raider,13|&|
-Final Fantasy XII The Zodiac Age,13|&|
+Final Fantasy XII The Zodiac Age,13|&|Vann,Ashe,Basch,Penelo,Balthier,Fran|&|In Dalmasca's capital city of Rabanastre, Princess Ashelia (Ashe) of Dalmasca and Prince Rasler of Nabradia have just wed, as the Archadian Empire invades the two countries. Rasler is killed in the war, the city of Nabudis is destroyed in a single explosion, and the Dalmascan King Raminas is assassinated moments after signing a treaty of surrender. Marquis Ondore announces that the assassin was Dalmascan captain Basch, who has been sentenced to death, and that Princess Ashe has committed suicide.|&|.jpg|&|.jpg
 Ghost Recon Wildlands,13|&|Delta Company, El Sueno|&|In Bolivia the country is over run by a Mexican drug cartel known as Santa Blanca.  The control the countries cops, and political figures|&|.jpg|&|.png
 A Plague Tale Innocence,13|&|Amicia de Rune,Hugo de Rune,Beatrice de Rune,English Army, Rats|&|Grim tale of brother and sister in a heartrending journey through the darkest hours of history.|&|.jpg|&|.jpeg 
