@@ -23,7 +23,9 @@ new_character_insert = '''insert into games.characters(name)values(%s);'''
 video_character_insert = '''insert into games.video_game_and_characters(video_game_id,character_id)values(%s,%s);'''
 delete_video_character = '''delete from games.video_game_and_characters where video_game_id = %s;'''
 update_game_description = '''update games.video_games set game_description = %s where id = %s;'''
-update_images = '''update games.video_games set small_image = %s, large_image=%s where id = %s;'''
+update_sm_images = '''update games.video_games set small_image = %s where id = %s;'''
+update_lg_images = '''update games.video_games set large_image=%s where id = %s;'''
+update_h_images = '''update games.video_games set header_image = %s where id = %s;'''
 
 def _select(q,p):
 	results = mysql_db.select_params(q,p)
@@ -68,27 +70,31 @@ with open(game_file) as f:
 		del_params = [game_id]
 		u = mysql_db.update_statement(update_game_description,[description_text,game_id])
 		d = mysql_db._delete(delete_video_character,del_params)
-		if len(line) == 5:
-			#small_image, large_image,game_id
-			image_name = title.replace(" ","")
+		image_name = title.replace(" ","")
+		if len(line) >= 4:
 			sm = "{}{}".format(image_name.lower(),line[3])
-			lm = "{}{}".format(image_name.lower(),line[4])
-			images = mysql_db.update_statement(update_images,[sm,lm,game_id])
+			images = mysql_db.update_statement(update_sm_images,[sm,game_id])
+		if len(line) >= 5:
+			lg = "{}{}".format(image_name.lower(),line[4])
+			images = mysql_db.update_statement(update_lg_images,[lg,game_id])
+		if len(line) >= 6:
+			h = "{}{}".format(image_name.lower(),line[5])
+			images = mysql_db.update_statement(update_h_images,[h,game_id])
 		characters = line[1].split(',')
-		print("\tAdding Characters:")
+		#print("\tAdding Characters:")
 		for item in characters:
 			item = item.strip()
 			char_params = [item]
 			c_results = _select(find_character_query,char_params)
 			character_id = int(c_results)
 			if character_id == 0:
-				print("\tNew character:{}".format(item))
+				#print("\tNew character:{}".format(item))
 				character_data = mysql_db.insert_statement(new_character_insert,char_params)
 				if character_data[0] == 'Error':
 					_error_mysql(character_data)
 				character_id = int(character_data[1])
-			else:
-				print("\t{}".format(item))
+			#else:
+				#print("\t{}".format(item))
 			vgc_params = [game_id,character_id]
 			mysql_db.insert_statement(video_character_insert,vgc_params)
 mysql_db.close_connection()
