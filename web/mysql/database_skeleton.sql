@@ -156,6 +156,7 @@ CREATE TABLE `video_game_comments` (
   `game_id` smallint(3) unsigned NOT NULL,
   `comment` varchar(140) NOT NULL,
   `status` tinyint(1) DEFAULT '1',
+  `insert_date` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `fk_game_id` (`game_id`),
   CONSTRAINT `fk_game_id` FOREIGN KEY (`game_id`) REFERENCES `video_games` (`id`)
@@ -176,6 +177,7 @@ CREATE TABLE `video_games` (
   `console_id` tinyint(3) unsigned NOT NULL,
   `header_image` varchar(70) DEFAULT NULL,
   `game_description` varchar(500) DEFAULT NULL,
+  `insert_date` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `fk_console` (`console_id`),
   CONSTRAINT `fk_console` FOREIGN KEY (`console_id`) REFERENCES `game_console` (`id`)
@@ -894,4 +896,4 @@ CREATE TABLE `test_tbl` (
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-15 18:41:18
+-- Dump completed on 2021-05-21  5:44:58
